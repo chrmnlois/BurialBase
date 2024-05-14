@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    /* border: 1px red solid; */
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+    display: block;
+    position: fixed;
+    padding: 35px 0;
+    width: 250px;
+    height: 100%;
+    /* background-color: #1E4233; */
+    background-image: linear-gradient(#1E4233, black);
+    list-style: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+
+.columbarium-name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.columbarium-address {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.menu__box {
+    border-bottom: 1px solid rgba (0, 0, 0, 0.05);
+    border-top: 1px solid rgba (225, 225, 225, 0.05);
+}
+
+.menu__item {
+    display: flex;
+    padding: 9px 18px;
+    color: white;
+    font-size: 15px;
+    transition-duration: .25s;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1); 
+}
+
+.bx {
+    margin-right: 15px;
+    font-size: 22px;
+    color: white;
+}
+
+.menu__item.view-map {
+    background-image: linear-gradient(#0A633C, #004529);
+    font-weight: bold;
+    cursor: default; /* Remove the hand cursor on hover */
+    pointer-events: none; /* Disable pointer events */
+}
+
+.menu__item.dashboard:hover, 
+.menu__item.add-deceased:hover, 
+.menu__item.view-records:hover, 
+.menu__item.generate-reports:hover, 
+.menu__item.manage-users:hover,
+.menu__item.log-out:hover {
+    background-color: #13934a;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu__item:hover {
+    background-color: #13934a;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border: 4px solid #998938;
+}
+
+.watermark {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+/* Main Content */
+.main-content {
+    width: 81.5vw;
+    margin-left: 250px;
+}
+
+    /* Header */
+    .cmis-header {
+        position: fixed;
+        /* background: #0A633C; */
+        background-image: linear-gradient(#0A633C, #004529);
+        padding: 15px 30px;
+        align-items: center;
+        justify-content: space-between;
+        width: 81.5vw;
+        display: flex;  
+    }
+
+    .cmis-name {
+        color: #FAF9F6;
+        font-size: 16px;
+        font-weight: 600; 
+    }
+
+    .user-profile {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        position: sticky;
+        width: 330px;
+    }
+
+    .user-profile p{
+        color: #FAF9F6;
+        font-size: 16px;
+        margin: 0px 16px 0px 0px;
+    }
+
+    .user-profile img {
+        width: 50px;
+        min-height: auto;
+        min-width: 10px;
+        height: 50px;
+        border-radius: 50px;
+    }
+
+    /* Web Page Title */
+    .webpage-title {
+        color: black;
+        width: 100%;
+        height: 60px;
+        margin-top: 50px;
+        font-weight: 600;
+        font-size: 25px;
+        text-align: center;
+        padding: 50px;
+        background-color: #E8E8E8;
+    }
+
+    .container {
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        background-color: #E8E8E8;
+        /* border: 1px solid black; */
+    }
+
+    /* Map */
+    .content-box { 
+        max-width: 965px; 
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3); 
+    }
+
+    .map-box {
+        /* border: 1px solid #ccc;
+        background-color: whitesmoke;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2); */
+        padding: 5px;
+    }
+
+    .map-content-wrapper {
+        display: block;
+    }
+
+    .map-second-floor {
+        border: 4px solid #0A633C;
+        display: flex;
+        border-radius: 8px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .st-james-alphaeus-room .room-text-box {
+            width: 85px;
+            height: 60px;
+            padding: 5px 0px 5px 0px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+            background-image: linear-gradient(to right, #ededed, #bdbdbd);
+            color: black;
+        }
+    
+    .room-text-box {
+        width: 85px;
+        height: 60px;
+        padding: 13px 0px 13px 0px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+        background-image: linear-gradient(to left, #ededed, #bdbdbd);
+        color: black;
+    }
+
+
+    .room-text-box:hover {
+        transform: scale(1.1);
+        transition-duration: .25s;
+    }
+
+        .st-philip-room {
+            border: 3px solid #0A633C;
+           /* padding: 60px 31px 40px 31px; */
+           padding: 45px 15px 40px 15px;
+            text-align: center;
+            /* background-image: linear-gradient(to right, #998938, #BFD15E); */
+            background-image: url('../images/bird.png');
+        }
+
+            .st-philip-room p {
+                font-size: 14px;
+            } 
+
+        .st-bartolomew-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 13px 40px 13px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+            
+        }
+
+            .st-bartolomew-room p {
+                font-size: 14px;
+            } 
+
+        .space-second-floor {
+            border: 3px solid #0A633C;
+            padding: 13.5px;
+            background-image: linear-gradient(to right, #ededed, #bdbdbd);
+            
+        } 
+
+        .st-thomas-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 23px 40px 23px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+
+            .st-thomas-room p {
+                font-size: 14px;
+            } 
+
+        .st-matthew-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 22px 40px 22px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+
+            .st-matthew-room p {
+                font-size: 14px;
+            } 
+
+        .st-james-alphaeus-room {
+            border: 3px solid #0A633C;
+            /* padding: 50px 11px 40px 11px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+
+            .st-james-alphaeus-room p {
+                font-size: 14px;
+            } 
+
+        .st-thaddaeus-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 14px 40px 14px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+
+            .st-thaddaeus-room p {
+                font-size: 14px;
+            } 
+
+        .st-simon-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 28px 40px 28px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+
+            .st-simon-room p {
+                font-size: 14px;
+            } 
+
+        .stairs {
+            border: 3px solid #0A633C;
+            padding: 13px;
+            background-image: linear-gradient(to right, #ededed, #bdbdbd);
+        } 
+
+    .map-first-floor {
+        margin-top: 1px;
+        border: 4px solid #0A633C;
+        display: flex;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    }
+
+        .comfort-room {
+            border: 3px solid #0A633C;
+            padding: 70px 92px 30px 92px;
+            background-image: linear-gradient(to left, #998938, #BFD15E);
+        }
+
+        .space-first-floor {
+            border: 3px solid #0A633C;
+            padding: 13.5px;
+            background-image: linear-gradient(to right, #ededed, #bdbdbd);
+        }
+
+        .st-john-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 31.5px 40px 31.5px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+            .st-john-room p {
+                font-size: 14px;
+            } 
+
+        .st-james-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 27.3px 40px 27.3px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+
+            .st-james-room p {
+                font-size: 14px;
+            } 
+
+        .st-andrew-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 25.2px 40px 25.2px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+
+            .st-andrew-room p {
+                font-size: 14px;
+            } 
+
+        .st-peter-room {
+            border: 3px solid #0A633C;
+            /* padding: 60px 30.8px 40px 30.8px; */
+            padding: 45px 15px 40px 15px;
+            text-align: center;
+            background-image: url('../images/bird.png');
+        } 
+
+            .st-peter-room p {
+                font-size: 14px;
+            } 
+
+        .st-therese-chapel {
+            border: 3px solid #0A633C;
+            padding: 70px 23.5px 30px 23px;
+            background-image: linear-gradient(to left, #998938, #BFD15E);
+        } 
+
+    .map-title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .map-address {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 13px;
+        font-weight: 200;
+    }
+
+    .title-second {
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .title-first {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px;
+    }

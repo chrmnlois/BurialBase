@@ -1,0 +1,175 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: url('../images/sign-bg.png');
+}
+
+.form {
+    max-width: 380px;
+    width: 100%;
+    padding: 20px 25px 20px 25px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, #ffffff, #D3D3D3);
+    border: 1px solid #ccc;
+    box-shadow: 0px 12px 14px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.header {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.header p{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.header img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    border: 3px solid #0A633C;
+}
+
+.desc-signup {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 25px;
+    text-align: center;
+}
+
+form .field {
+    position: relative;
+    height: 38px;
+    width: 100%px;
+    margin-top: 15px;
+}
+
+.form-content {
+    text-align: center;
+
+}
+
+.field input, 
+.field button {
+    height: 38px;
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 15px;
+}
+
+.field input {
+    padding: 0 15px;
+    border: 1px solid #cacaca;
+}
+
+.field input:focus {
+    outline-color:#13934a;
+}
+
+.fa-eye{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    color: #8b8b8b;
+}
+
+.field button {
+    background-color: #0A633C;
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.field button:hover {
+    background-color: #13934a;
+    color: #fff;
+}
+
+.field button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 15px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 20px #13934a;
+}
+  
+.field button:active:after {
+    box-shadow: 0 0 0 0 #13934a;
+    position: absolute;
+    border-radius: 15px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.field button:active {
+    top: 1px;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link span, 
+.form-link span a {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form a {
+    color: #0A633C;
+    text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+.back-login {
+    margin-top: 10px;
+   
+}
+.back-login a {
+    font-size: 15px;
+    color: #0A633C;
+
+}
